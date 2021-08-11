@@ -1,5 +1,5 @@
 # MailBombingTool
-Clone modify and upload this page to the internet to organise mail bombing campigns this page to easily mail bomb
+Clone modify and upload this page to the internet to organise mail bombing campaigns 
 ## Preview 
 <img src="https://github.com/frephs/MailBombingTool/blob/main/preview.png" width=40% align=left>
  <img src="https://github.com/frephs/MailBombingTool/blob/main/preview2.png" width=40%>
