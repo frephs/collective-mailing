@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <title>MailBomb</title>
+</head>
+
+<body>
+     <div class="container">
+          <h2 style="margin-top:30px">Welcome to the mail bombing tool</h2>
+          <p> By Cloning and modifying this page you can easily organise mail-bombing campaigns</p>
+          <form>
+               <div class="form-group">
+                    <h3>Mail</h3>
+                    <hr>
+                                   <label for="recipient">Recipient</label>
+                                   <input class="form-control" id ="recipient"type="text" id="subject" name="recipient" value="jeffrey@bez.os"> <br>
+                                   <label for="subject">Subject</label>
+                                   <input class="form-control" id="subject" type="text" id="subject" name="" value="Eat the rich"> <br>
+                                   <label for="body">Body</label>
+                                   <textarea class="form-control" name="body" id="body" name="name" rows="8" cols="80">I'm deeply enraged by capitalism</textarea>
+
+                    <br>
+                    <a id="email" style="color:white;" class="btn btn-primary">Send your email!</a>
+               </div>
+          </form>
+
+     </div>
+</body>
+<script type="text/javascript">
+function getBody() {
+     return document.getElementById('body').innerHTML;
+}
+function getRecipient() {
+     return document.getElementById('recipient').value;
+}
+function getSubject() {
+     return document.getElementById('subject').value;
+}
+
+     var link = document.getElementById('email');
+     link.onclick = function() {
+          this.href = "mailto:"
+          this.href += getRecipient();
+          this.href += "?subject="
+          this.href += getSubject();
+          this.href +="&body=";
+          this.href += getBody();
+          document.write(this.href);
+     };
+
+
+</script>
+</html>
