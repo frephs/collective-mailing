@@ -4,5 +4,6 @@ Clone modify and upload this page to the internet to organise mail bombing campi
 <img src="https://github.com/frephs/MailBombingTool/blob/main/preview.png" width=40% align=left>
  <img src="https://github.com/frephs/MailBombingTool/blob/main/preview2.png" width=40%>
 [Online preview here](https://htmlpreview.github.io/?mailbomb.html)
+
 ## Todo
 - Python script to create mailbombing landings 
