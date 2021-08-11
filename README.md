@@ -6,4 +6,4 @@ Clone modify and upload this page to the internet to organise mail bombing campi
 [Online preview here](https://htmlpreview.github.io/?mailbomb.html)
 
 ## Todo
-- Python script to create mailbombing landings 
+- Python script to automate the creation of pages like this
