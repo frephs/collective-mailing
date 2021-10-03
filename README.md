@@ -10,4 +10,4 @@ This is not a spamming tool. This tool facilitates unionizing and collective mai
 
 ## Todo
 - [ ] Python script to automate the creation of pages like this
-- [ ] Qr code scanner
+- [ ] Qr code to be scanned
