@@ -9,4 +9,5 @@ This is not a spamming tool. This tool facilitates unionizing and collective mai
 [Online preview here](https://htmlpreview.github.io/?https://github.com/frephs/MailBombingTool/blob/main/mailbomb.html)
 
 ## Todo
-- Python script to automate the creation of pages like this
+- [] Python script to automate the creation of pages like this
+- [] Qr code scanner
