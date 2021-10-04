@@ -4,8 +4,9 @@
      <meta charset="utf-8">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" charset="utf-8"></script>
      <title>MailBomb</title>
 </head>
 
@@ -17,19 +18,21 @@
                <div class="form-group">
                     <h3>Mail</h3>
                     <hr>
-                                   <label for="recipient">Recipient</label>
-                                   <input class="form-control" id ="recipient"type="text" id="subject" name="recipient" value="jeffrey@bez.os"> <br>
-                                   <label for="subject">Subject</label>
-                                   <input class="form-control" id="subject" type="text" id="subject" name="" value="Eat the rich"> <br>
-                                   <label for="body">Body</label>
-                                   <textarea class="form-control" name="body" id="body" name="name" rows="8" cols="80">I'm deeply enraged by capitalism</textarea>
-
+                    <label for="recipient">Recipient</label>
+                    <input class="form-control" id ="recipient"type="text" id="subject" name="recipient" value="jeffrey@bez.os"> <br>
+                    <label for="subject">Subject</label>
+                    <input class="form-control" id="subject" type="text" id="subject" name="" value="Eat the rich"> <br>
+                    <label for="body">Body</label>
+                    <textarea class="form-control" name="body" id="body" name="name" rows="8" cols="80">I'm deeply enraged by capitalism</textarea>
+                    <label for="qrcode" class="mt-4">Qr Code</label>
+                    <div name="qrcode" id="qrcode" class="border rounded margin-20 mb-4 p-2"></div>
                     <br>
                     <a id="email" style="color:white;" class="btn btn-primary">Send your email!</a>
-               </div>
-          </form>
+                    <a id ="qrlink" href="#" style="color:white;" class="btn btn-primary"> Generate your qr code! </a>
+          </div>
+     </form>
 
-     </div>
+</div>
 </body>
 <script type="text/javascript">
 function getBody() {
@@ -42,17 +45,37 @@ function getSubject() {
      return document.getElementById('subject').value;
 }
 
-     var link = document.getElementById('email');
-     link.onclick = function() {
-          this.href = "mailto:"
-          this.href += getRecipient();
-          this.href += "?subject="
-          this.href += getSubject();
-          this.href +="&body=";
-          this.href += getBody();
-          document.write(this.href);
-     };
+var link = document.getElementById('email');
+link.onclick = function() {
+     this.href = "mailto:"
+     this.href += getRecipient();
+     this.href += "?subject="
+     this.href += getSubject();
+     this.href +="&body=";
+     this.href += getBody();
+     document.write(this.href);
+};
 
+var qrlink = document.getElementById('qrlink');
+qrlink.onclick = function(){
+     href = "mailto:"
+     href += getRecipient();
+     href += "?subject="
+     href += getSubject();
+     href +="&body=";
+     href += getBody();
+     new QRCode(document.getElementById("qrcode"), {
+    text: href,
+    width: 100,
+    height: 100,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+}
 
+function qrCode(){
+
+}
 </script>
 </html>
