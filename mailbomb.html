@@ -58,13 +58,15 @@ link.onclick = function() {
 
 var qrlink = document.getElementById('qrlink');
 qrlink.onclick = function(){
+     qrdiv = document.getElementById("qrcode")
+     qrdiv.innerHTML="";
      href = "mailto:"
      href += getRecipient();
      href += "?subject="
      href += getSubject();
      href +="&body=";
      href += getBody();
-     new QRCode(document.getElementById("qrcode"), {
+     new QRCode(qrdiv, {
     text: href,
     width: 100,
     height: 100,
