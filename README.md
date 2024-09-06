@@ -6,7 +6,7 @@ This is not a spamming tool. This tool facilitates unionizing and makes organizi
 <img src="https://github.com/frephs/MailBombingTool/blob/main/preview.png" width=40% align=left>
  <img src="https://github.com/frephs/MailBombingTool/blob/main/preview2.png" width=40%>
 
-[Online preview here](https://frephs.github.io/MailBombingTool/)
+[Online preview here](https://frephs.github.io/collective-mailing/)
 
 ## Todo
 - [x] Qr code generator
