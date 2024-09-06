@@ -1,5 +1,5 @@
 # Collective mailing
-Clone modify and upload this page to the internet to organise mail collective mailing campaigns 
+Clone modify and host this page to organise collective mailing campaigns 
 ## Disclaimer
 This is not a spamming tool. This tool facilitates unionizing and makes organizing email campaigns with common messages, recipients and causes simple.  
 ## Preview 
