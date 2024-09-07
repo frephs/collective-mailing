@@ -25,13 +25,15 @@
                     <label for="subject">Subject</label>
                     <input class="form-control" id="subject" type="text" id="subject" name="subject" value="Free palestine" oninput="qrcode()"> <br>
                     <label for="body">Body</label>
+                    <textarea class="form-control" id="body" name="body" rows="12" oninput="qrcode()">The Palestinian cause represents a struggle for self-determination, dignity, and the right to live freely in their homeland. Since the mid-20th century, for 76 years , Palestinians have faced mass murder, displacement, occupation, starvation and a continuous erosion of their rights.
+
 The Palestinian cause represents a struggle for self-determination, dignity, and the right to live freely in their homeland. Since the mid-20th century, for 76 years , Palestinians have faced displacement, occupation, and a continuous erosion of their rights. The creation of Israel in 1948 led to the displacement of hundreds of thousands of Palestinians, an event known as the Nakba (Catastrophe). For generations, Palestinians in the West Bank, Gaza, and diaspora have lived under harsh conditions, including military occupation, economic blockades, and restricted access to basic human rights.
 
-Palestinians seek the establishment of an independent state with East Jerusalem as its capital, in line with numerous UN resolutions. For them, the ongoing Israeli settlement expansions and the fragmentation of their land are obstacles to peace and justice. Palestinians advocate for the end of occupation, the right of return for refugees, and a future where they can live with freedom, security, and equality. The Palestinian cause is not just a political issue, but a humanitarian one.
+Palestinians seek the establishment of an independent state, in line with numerous UN resolutions. The Palestinian cause is not just a political issue, but a humanitarian one.
 
-Stop the Palestinian genocide. Stop the bombing, stop the murder, stop the starvation and stop withold of food, water and electricity.  </textarea>
+Stop the Palestinian genocide. Stop the bombing, stop the murder, stop the starvation and stop withold of food, water and electricity. </textarea>
                     <label for="qrcode" class="mt-4">Qr Code</label>
-                    <div name="qrcode" id="qrcode" class="border rounded margin-20 mb-4 p-2"></div>
+                    <div name="qrcode" id="qrcode" class="border rounded margin-20 mb-4 p-2 center"></div>
                     <br>
                     <a id="email" style="color:white;" class="btn btn-primary">Send your email!</a>
           </div>
@@ -74,8 +76,8 @@ function qrcode(){
      href += getBody();
      new QRCode(qrdiv, {
     text: href,
-    width: 150,
-    height: 150,
+    width: 300,
+    height: 300,
     colorDark : "#000000",
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H
